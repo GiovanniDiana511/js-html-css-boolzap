@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.background-top {
+    height: 10vh;
+    background-color: #00a093
+}
+
+.background-bottom {
+    height: 90vh;
+    background-color: #dfe0d7
+}
+
+.boolzap-window {
+    border-radius: 0.5%;
+    position: absolute;
+    top: 2.5vh;
+    left: 5vw;
+    height: 95vh;
+    width: 90vw;
+    background-image: url("https://i.pinimg.com/originals/e8/d9/4e/e8d94e1e8b6b530ad315e9385290141b.jpg");
+}
+
+.window-left {
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+
+.window-right {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    float: right;
+    justify-content: space-between;
+}
+
+.left-nav {
+    background-color: #ededed;
+    height: 10%;
+    width: 100%;
+}
+.left-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-nav > img {
+    margin-left: 10px;
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+}
+
+.left-nav-icon > i {
+    color: #bababa;
+    font-size: 25px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.left-nav-icon > i:hover {
+    color: #00a093;
+    transform: scale(1.05);
+    transition: 0.1s;
+}
+
+.left-notification {
+    background-color: #99dffc;
+    height: 10%;
+    width: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+.notification-icon {
+    margin-left: 18px;
+    height: 60px;
+    width: 60px;
+    background-color: #f4fcff;
+    border-radius: 50%;
+    position: relative;
+}
+
+.notification-icon > i {
+    color: #99dffc;
+    font-size: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+
+.notification-icon > i:hover {
+    color: black;
+    transition: 0.1s;
+}
+
+.notification-text {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#p-notification {
+    opacity: 0.5;
+}
+
+#p-notification:hover {
+    color: black;
+    transition: 0.1s;
+    opacity: 1;
+}
+
+.left-search {
+    background-color: #ededed;
+    height: 5%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.left-search > i {
+    position: absolute;
+    left: 7.5%;
+    color: #bababa;
+    cursor: pointer;
+}
+
+.left-search >i:hover {
+    color: #00a093;
+    transform: scale(1.05);
+    transition: 0.1s;
+}
+
+.left-search > input {
+    width: 95%;
+    height: 65%;
+    margin-left: 2.5%;
+    border-radius: 3px;
+    border-style: none;
+    padding-left: 15%;
+}
+
+.left-contacts {
+    height: 75%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.contact-box {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    float: left;
+    border-top: 1px solid #bababa;
+}
+
+.contact-box:hover {
+    background-color: #00a093;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    width: 20%;
+}
+
+.contact-icon > img {
+    margin-left: 15px;
+    height: 60px;
+    width: 60px;
+}
+
+.contact-text {
+    float: right;
+    width: 80%;
+}
+
+#name-contact::after {
+    content: "12.34";
+    color: black;
+    opacity: 0.5;
+    font-size: 14px;
+    float: right;
+    margin-right: 5px;
+}
+
+#p-contact {
+    opacity: 0.5;
+}
+
+.right-nav {
+    display: flex;
+    background-color: #ededed;
+    height: 10%;
+    width: 100%;
+    border-left: 1px solid #bababa;
+}
+
+.right-center {
+    height: 80%;
+    width: 100%;
+}
+
+.right-bottom {
+    display: flex;
+    background-color: #ededed;
+    height: 10%;
+    width: 100%;
+    align-items: center;
+}
+
+.bottom-emoticon {
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    color: #bababa;
+    font-size: 25px;
+}
+
+.bottom-emoticon:hover {
+    color: #00a093;
+    transform: scale(1.05);
+    transition: 0.1s;
+}
+
+.bottom-text {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.bottom-text > input {
+    height: 50%;
+    width: 100%;
+    border-style: none;
+    border-radius: 10px;
+    padding-left: 15px;
+}
+
+.bottom-mic {
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    color: #bababa;
+    font-size: 25px;
+}
+
+.bottom-mic > i:hover {
+    color: #00a093;
+    transform: scale(1.05);
+    transition: 0.1s;
+}
