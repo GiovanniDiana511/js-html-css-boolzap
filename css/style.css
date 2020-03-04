@@ -22,7 +22,6 @@
 }
 
 .boolzap-window {
-    border-radius: 0.5%;
     position: absolute;
     top: 2.5vh;
     left: 5vw;
@@ -80,6 +79,11 @@
     transition: 0.1s;
 }
 
+.left-nav > img:hover {
+    transform: scale(1.05);
+    transition: 0.1s;
+}
+
 .left-notification {
     background-color: #99dffc;
     height: 10%;
@@ -109,7 +113,7 @@
 }
 
 .notification-icon > i:hover {
-    color: black;
+    color: red;
     transition: 0.1s;
 }
 
@@ -130,7 +134,7 @@
 
 .left-search {
     background-color: #ededed;
-    height: 5%;
+    height: 6%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -154,7 +158,7 @@
     width: 95%;
     height: 65%;
     margin-left: 2.5%;
-    border-radius: 3px;
+    border-radius: 10px;
     border-style: none;
     padding-left: 15%;
 }
@@ -166,16 +170,17 @@
 }
 
 .contact-box {
-    height: 10%;
+    height: 12%;
     width: 100%;
     display: flex;
     align-items: center;
     float: left;
-    border-top: 1px solid #bababa;
+    border-top: 1px solid #eceeee;
+    border-width:
 }
 
 .contact-box:hover {
-    background-color: #00a093;
+    background-color: rgb(0,160,147, 0.5);
     transition: 0.1s;
     cursor: pointer;
 }
@@ -216,11 +221,124 @@
     height: 10%;
     width: 100%;
     border-left: 1px solid #bababa;
+    align-items: center;
+}
+
+.right-nav > img {
+    margin-left: 10px;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+}
+
+.nav-text {
+    margin-left: 15px;
+    width: 85%;
+    cursor: pointer;
+}
+
+#last-access {
+    opacity: 0.5;
+}
+
+#last-access:hover {
+    opacity: 1;
+    transition: 0.1s;
+}
+
+.nav-icon {
+    width: 15%;
+}
+
+.nav-icon > i {
+    color: #bababa;
+    font-size: 25px;
+    margin-left: 20px;
+    margin-right: 5px;
+}
+
+.nav-icon > i:hover {
+    cursor: pointer;
+    color: #00a093;
+    transform: scale(1.05);
+    transition: 0.1s;
 }
 
 .right-center {
     height: 80%;
     width: 100%;
+    overflow-y: auto;
+}
+
+.message-dx {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: 15%;
+}
+
+.message-dx::after {
+    font-family: "fontawesome"; font-weight: 400; content: "\f0d7";
+    color: #dafac2;
+    position: absolute;
+    padding-right: 28px;
+    padding-bottom: 55px;
+    font-size: 30px;
+}
+
+.message-sx {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 15%;
+    justify-content: center;
+}
+
+.message-sx::before {
+    font-family: "fontawesome"; font-weight: 400; content: "\f0d7";
+    color: #ffffff;
+    position: absolute;
+    padding-left: 28px;
+    padding-bottom: 55px;
+    font-size: 30px;
+}
+
+.message-sent {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #dafac2;
+    width: 25%;
+    height: 60%;
+    margin: 0px 35px;
+}
+
+.message-received {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    width: 25%;
+    height: 60%;
+    margin: 0px 35px;
+    background-color: #ffffff;
+}
+
+div[class*="message"] > p {
+    font-weight: bold;
+    margin: 0 10px;
+    position: relative;
+}
+
+div[class*="message"] > p::after {
+    content: "01.23";
+    left: 245px;
+    position: absolute;
+    font-size: 14px;
+    bottom: -18px;
+    opacity: 0.5;
 }
 
 .right-bottom {
@@ -235,7 +353,7 @@
     width: 5%;
     display: flex;
     justify-content: center;
-    color: #bababa;
+    color: #767e81;
     font-size: 25px;
 }
 
@@ -264,7 +382,7 @@
     width: 5%;
     display: flex;
     justify-content: center;
-    color: #bababa;
+    color: #767e81;
     font-size: 25px;
 }
 
