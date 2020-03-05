@@ -315,8 +315,9 @@
     border-radius: 10px;
     background-color: #dafac2;
     width: 25%;
-    height: 60%;
+    height: auto;
     margin: 0px 35px;
+
 }
 
 .message-received {
@@ -325,19 +326,25 @@
     align-items: center;
     border-radius: 10px;
     width: 25%;
-    height: 60%;
+    height: auto;
     margin: 0px 35px;
     background-color: #ffffff;
+}
+
+.template {
+    display: none;
 }
 
 div[class*="message"] > p {
     font-weight: bold;
     margin: 0 10px;
     width: 100%;
+    padding-top: 22.5px;
+    padding-bottom: 22.5px;
 }
 
 div[class*="message"] > p::after {
-    content: "01.23";
+    content: "";
     position: absolute;
     float: right;
     font-size: 14px;
