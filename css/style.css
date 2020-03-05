@@ -284,8 +284,9 @@
     color: #dafac2;
     position: absolute;
     padding-right: 28px;
-    padding-bottom: 55px;
+    top: 9%;
     font-size: 30px;
+    height: 15%;
 }
 
 .message-sx {
@@ -301,12 +302,14 @@
     font-family: "fontawesome"; font-weight: 400; content: "\f0d7";
     color: #ffffff;
     position: absolute;
+    top: 9%;
     padding-left: 28px;
-    padding-bottom: 55px;
     font-size: 30px;
+    height: 15%;
 }
 
 .message-sent {
+    position: relative;
     display: flex;
     align-items: center;
     border-radius: 10px;
@@ -317,6 +320,7 @@
 }
 
 .message-received {
+    position: relative;
     display: flex;
     align-items: center;
     border-radius: 10px;
@@ -329,16 +333,17 @@
 div[class*="message"] > p {
     font-weight: bold;
     margin: 0 10px;
-    position: relative;
+    width: 100%;
 }
 
 div[class*="message"] > p::after {
     content: "01.23";
-    left: 245px;
     position: absolute;
+    float: right;
     font-size: 14px;
-    bottom: -18px;
     opacity: 0.5;
+    right: 5px;
+    bottom: 2.5px;
 }
 
 .right-bottom {
