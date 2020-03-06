@@ -202,7 +202,7 @@
     width: 80%;
 }
 
-#name-contact::after {
+.name-contact::after {
     content: "12.34";
     color: black;
     opacity: 0.5;
@@ -211,7 +211,7 @@
     margin-right: 5px;
 }
 
-#p-contact {
+.p-contact {
     opacity: 0.5;
 }
 
@@ -280,7 +280,9 @@
 }
 
 .message-dx::after {
-    font-family: "fontawesome"; font-weight: 400; content: "\f0d7";
+    font-family: "fontawesome";
+    font-weight: 400;
+    content: "\f0d7";
     color: #dafac2;
     position: absolute;
     padding-right: 28px;
@@ -299,7 +301,9 @@
 }
 
 .message-sx::before {
-    font-family: "fontawesome"; font-weight: 400; content: "\f0d7";
+    font-family: "fontawesome";
+    font-weight: 400;
+    content: "\f0d7";
     color: #ffffff;
     position: absolute;
     top: 9%;
@@ -390,7 +394,7 @@ div[class*="message"] > p::after {
     padding-left: 15px;
 }
 
-.bottom-mic {
+.bottom-icon {
     width: 5%;
     display: flex;
     justify-content: center;
@@ -398,7 +402,7 @@ div[class*="message"] > p::after {
     font-size: 25px;
 }
 
-.bottom-mic > i:hover {
+.bottom-icon > i:hover {
     color: #00a093;
     transform: scale(1.05);
     transition: 0.1s;
