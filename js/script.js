@@ -35,6 +35,16 @@ function inviaMessaggio(){
 }
 
 $(document).ready(function(){
+    $("#dark-mode").click(function(){
+        $("#dark-mode").toggleClass("dark-mode-active");
+        $(".boolzap-window").toggleClass("boolzap-window-dark");
+        $(".left-nav").toggleClass("left-nav-dark");
+        $(".left-search").toggleClass("left-search-dark");
+        $(".left-contacts").toggleClass("left-contacts-dark");
+        $(".right-nav").toggleClass("right-nav-dark");
+        $(".right-bottom").toggleClass("right-bottom-dark");
+    });
+
     $("#last-access #la-time").text(orario());
     //$(".name-contact").after(orario);
     // Funzione inviaMessaggio al click o alla pressione del tasto INVIO
