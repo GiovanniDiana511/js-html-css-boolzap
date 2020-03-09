@@ -376,8 +376,8 @@
 
 .dropdown {
     position: absolute;
-    background-color: #ededed;
-    top: 110%;
+    background-color: #00a093;
+    top: 40%;
     display: flex;
     flex-direction: column;
     font-size: 12px;
@@ -419,11 +419,11 @@ div[class*="message"] > i {
     font-family: "fontawesome";
     font-weight: 400;
     content: "\f0dd";
-    color: #bababa;
+    color: #00a093;
     position: absolute;
     left: 90%;
     font-size: 30px;
-    bottom: 5%;
+    bottom: 65%;
     display: none;
 }
 

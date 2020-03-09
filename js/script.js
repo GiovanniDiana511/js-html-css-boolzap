@@ -9,11 +9,13 @@ var minuti = data.getMinutes();              // Assegniamo alla variabile minuti
 var orario = ora + "." + minuti;             // Assegniamo alla variabile orario l'ora + i minuti
 return orario                                // Ritorniamo l'orario al "mondo esterno"
 }
+
 // Funzione scroll automatico all'ultimo messaggio
 function scroll() {
     var pixelScroll = $(".right-center").prop('scrollHeight');        // Ci prendiamo l'altezza del div
     $(".right-center").scrollTop(pixelScroll);                        // Scrolliamo il div
 };
+
 // Funzione inviaMessaggio
 function inviaMessaggio(){
     var textInput = $("#message-input").val();                        // Assegniamo il valore dell'input alla variabile
@@ -24,9 +26,11 @@ function inviaMessaggio(){
         messageSent.find(".message-sent > p").after(orario);          // Inseriamo l'orario (attuale) preso dalla funzione "orario" e lo inseriamo nell'after del tag <p>
         messageSent.removeClass("template");                          // Rimuoviamo la classe template con display none
         $(".right-center").append(messageSent);                       // Reinserisco il template clonato nel div
+
         $(".message-sent").click(function(){
             $(this).find(".dropdown").slideToggle(500);
         });
+
         scroll();
 
         setTimeout(function(){
@@ -35,15 +39,18 @@ function inviaMessaggio(){
             messageReceived.find(".message-received > p").after(orario);
             messageReceived.removeClass("template");
             $(".right-center").append(messageReceived);
+
             $(".message-received").click(function(){
                 $(this).find(".dropdown").slideToggle(500);
             });
+
             scroll();
         }, 1000);
     }
 }
 
 $(document).ready(function(){
+    // Modalità dark al click
     $("#dark-mode").click(function(){
         $("#dark-mode").toggleClass("dark-mode-active");
         $(".boolzap-window").toggleClass("boolzap-window-dark");
@@ -56,7 +63,6 @@ $(document).ready(function(){
     });
 
     $("#last-access #la-time").text(orario());
-    //$(".contact-text").find(".name-contact").after(orario);
 
     // Funzione inviaMessaggio al click o alla pressione del tasto INVIO
     $(".bottom-icon i").click(inviaMessaggio);
@@ -88,6 +94,24 @@ $(document).ready(function(){
                 $(this).show();                                                     // Se il carattere inserito nel search box è presente nella variabile "nomeTrovato", mostriamo il box
             } else {
                 $(this).hide();                                                     // Altrimenti, lo nascondiamo
+            }
+        });
+    });
+
+    $(".contact-box").click(function(){                               // Applichiamo una funzione al click
+        var utenteSelezionato = $(this).data("codice-utente");        // Associamo alla variabile, il valore chiamato da noi "codice utente"
+        var immagineUtente = $(this).find("img").attr("src");         // Associamo alla variabile, l'attributo src presente nel tag img con .attr in lettura
+        console.log(immagineUtente);
+        var nomeUtente = $(this).find(".name-contact").text();        // Associamo alla variabile, il nome contenuto nel tag con .text in lettura
+        console.log(nomeUtente);
+
+        $(".right-nav img").attr("src", immagineUtente);              // Viene sostituita l'immagine precedente con quella dell'immagine dell'utente selezionato con .attr in scrittura
+        $(".right-nav #name").html("<b>"+ nomeUtente +"</b>");        // Viene sostituito il nome utente con quello selezionato e viene aggiunto il grassetto con .html in scrittura
+        //da completare
+        $("").each(function(){
+            if ($(this).data("codice-utente") == utenteSelezionato) {
+                $("").removeClass("active");
+                $(this).addClass("active");
             }
         });
     });
