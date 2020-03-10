@@ -21,24 +21,28 @@ function inviaMessaggio(){
     var textInput = $("#message-input").val();                        // Assegniamo il valore dell'input alla variabile
     if (textInput.trim().length > 0) {                                // Controlliamo l'input inserito e con trim, eliminiamo gli spazi vuoti all'inizio e alla fine dell'input
         $("#message-input").val("");                                  // Ripuliamo il box input
-        var messageSent = $(".message-dx.template").clone();          // Ci cloniamo un template
+        var messageSent = $(".message-dx.template.active").clone();   // Ci cloniamo un template
         messageSent.find(".message-sent > p").text(textInput);        // Inseriamo il testo contenuto nel box input nel tag <p>
         messageSent.find(".message-sent > p").after(orario);          // Inseriamo l'orario (attuale) preso dalla funzione "orario" e lo inseriamo nell'after del tag <p>
         messageSent.removeClass("template");                          // Rimuoviamo la classe template con display none
-        $(".right-center").append(messageSent);                       // Reinserisco il template clonato nel div
+        $(".right-center.active").append(messageSent);                // Reinserisco il template clonato nel div
 
         $(".message-sent").click(function(){
             $(this).find(".dropdown").slideToggle(500);
         });
 
+        //$(".delete").click(function){
+
+        //}
+
         scroll();
 
         setTimeout(function(){
-            var messageReceived = $(".message-sx.template").clone();
+            var messageReceived = $(".message-sx.template.active").clone();
             messageReceived.find(".message-received > p").text("ok");
             messageReceived.find(".message-received > p").after(orario);
             messageReceived.removeClass("template");
-            $(".right-center").append(messageReceived);
+            $(".right-center.active").append(messageReceived);
 
             $(".message-received").click(function(){
                 $(this).find(".dropdown").slideToggle(500);
@@ -101,16 +105,16 @@ $(document).ready(function(){
     $(".contact-box").click(function(){                               // Applichiamo una funzione al click
         var utenteSelezionato = $(this).data("codice-utente");        // Associamo alla variabile, il valore chiamato da noi "codice utente"
         var immagineUtente = $(this).find("img").attr("src");         // Associamo alla variabile, l'attributo src presente nel tag img con .attr in lettura
-        console.log(immagineUtente);
+        //console.log(immagineUtente);
         var nomeUtente = $(this).find(".name-contact").text();        // Associamo alla variabile, il nome contenuto nel tag con .text in lettura
-        console.log(nomeUtente);
+        //console.log(nomeUtente);
 
         $(".right-nav img").attr("src", immagineUtente);              // Viene sostituita l'immagine precedente con quella dell'immagine dell'utente selezionato con .attr in scrittura
         $(".right-nav #name").html("<b>"+ nomeUtente +"</b>");        // Viene sostituito il nome utente con quello selezionato e viene aggiunto il grassetto con .html in scrittura
         //da completare
-        $("").each(function(){
+        $(".right-center").each(function(){
             if ($(this).data("codice-utente") == utenteSelezionato) {
-                $("").removeClass("active");
+                $(".right-center").removeClass("active");
                 $(this).addClass("active");
             }
         });

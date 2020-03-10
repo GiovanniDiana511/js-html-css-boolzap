@@ -318,6 +318,11 @@
     height: 80%;
     width: 100%;
     overflow-y: auto;
+    display: none;
+}
+
+.active {
+    display: block;
 }
 
 .message-dx {
@@ -376,7 +381,7 @@
 
 .dropdown {
     position: absolute;
-    background-color: #00a093;
+    background-color: #dfe0d7;
     top: 40%;
     display: flex;
     flex-direction: column;
@@ -403,6 +408,13 @@
     cursor: pointer;
 }
 
+.delete {
+    border: none;
+    background-color: #dfe0d7;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .message-received {
     position: relative;
     display: flex;
@@ -419,7 +431,7 @@ div[class*="message"] > i {
     font-family: "fontawesome";
     font-weight: 400;
     content: "\f0dd";
-    color: #00a093;
+    color: #dfe0d7;
     position: absolute;
     left: 90%;
     font-size: 30px;
