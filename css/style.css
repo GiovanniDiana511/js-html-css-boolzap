@@ -319,52 +319,39 @@
     width: 100%;
     overflow-y: auto;
     display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .active {
-    display: block;
-}
-
-.message-dx {
-    position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    height: 15%;
 }
 
-.message-dx::after {
+.active-contact {
+    background-color: #00a093;
+}
+
+.message-sent.message::after {
     font-family: "fontawesome";
     font-weight: 400;
     content: "\f0d7";
     color: #dafac2;
     position: absolute;
-    padding-right: 28px;
-    top: 9%;
+    top: -12px;
     font-size: 30px;
-    height: 15%;
+    right: -8px;
 }
 
-.message-sx {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    height: 15%;
-    justify-content: center;
-}
-
-.message-sx::before {
+.message-received.message::before {
     font-family: "fontawesome";
     font-weight: 400;
     content: "\f0d7";
     color: #ffffff;
     position: absolute;
-    top: 9%;
-    padding-left: 28px;
+    top: -12px;
+    left: -8px;
     font-size: 30px;
-    height: 15%;
 }
 
 .message-sent {
@@ -373,10 +360,13 @@
     align-items: center;
     border-radius: 10px;
     background-color: #dafac2;
-    width: 25%;
+    min-width: 100px;
+    max-width: 350px;
+    flex-wrap: wrap;
     height: auto;
-    margin: 0px 35px;
+    margin: 15px 15px;
     justify-content: flex-end;
+    align-self: flex-end;
 }
 
 .dropdown {
@@ -395,6 +385,10 @@
 
 .dropdown:hover {
     cursor: pointer;
+}
+
+.dropdown-active {
+    display: block;
 }
 
 .dropdown-item {
@@ -421,9 +415,12 @@
     align-items: center;
     justify-content: flex-end;
     border-radius: 10px;
-    width: 25%;
+    min-width: 100px;
+    max-width: 350px;
     height: auto;
-    margin: 0px 35px;
+    flex-wrap: wrap;
+    height: auto;
+    margin: 15px 15px;
     background-color: #ffffff;
 }
 
@@ -433,9 +430,10 @@ div[class*="message"] > i {
     content: "\f0dd";
     color: #dfe0d7;
     position: absolute;
-    left: 90%;
+    float: right;
+    right: 8px;
     font-size: 30px;
-    bottom: 65%;
+    bottom: 70%;
     display: none;
 }
 
@@ -455,8 +453,7 @@ div[class*="message"] > p {
     padding-bottom: 22.5px;
 }
 
-div[class*="message"] > p::after {
-    content: "";
+div[class*="message"] > .orario {
     position: absolute;
     float: right;
     font-size: 14px;
