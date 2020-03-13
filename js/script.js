@@ -57,7 +57,7 @@ function generaContatti() {
     var source = $("#template-contact-box").html();                         // Leggiamo ed associamo alla variabile source il template-contact-box presente in HTML
     var template = Handlebars.compile(source);                              // Compiliamo con Handlebars la variabile source e la associamo alla variabile template
 
-    var contatti = []                                                       // Definiamo un oggetto
+    var contatti = [                                                      // Definiamo un oggetto
     {
         posizioneContatto: 'primo',
         srcImmagine: 'img/avataaars.png',
@@ -124,7 +124,7 @@ function generaContatti() {
         nome: 'Nikolas',
         testo: 'Non poteva essere altrimenti'
     },
-};
+];
 
     for (var i = 0; i < contatti.length; i++) {
         var templatePopolato = template(contatti[i]);
